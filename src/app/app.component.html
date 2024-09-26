@@ -1,0 +1,10 @@
+<h2>Title Case Pipe and Date Pipe with UpperCase Pipe {{ company | titlecase }} on {{ purchasedOn | date | uppercase }}</h2>
+<h2>Title Case: {{ 'one,two,three' | titlecase }}</h2>
+<h2>Currency Pipe: {{ amount | currency:'' }}</h2>
+<h2>Decimal Pipe: {{ amount | number:'1.2-3' }}</h2>
+<h2>JSON pipe: {{ person | json }} </h2>
+
+<h2>KeyValue Pipe</h2>
+<h2 *ngFor="let item of person | keyvalue: keepSamePropOrder">
+  {{item.key}} : {{item.value}}
+</h2>
