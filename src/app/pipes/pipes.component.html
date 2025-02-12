@@ -1,0 +1,15 @@
+<p>Title Case Pipe and Date Pipe with UpperCase Pipe {{ company | titlecase }} on {{ purchasedOn | date:'MMMM dd - YY' | uppercase }}</p>
+<p>Title Case: {{ 'one,two,three' | titlecase }}</p>
+<p>Currency Pipe: {{ amount | currency:'' }}</p>
+<p>Decimal Pipe: {{ amount | number:'1.2-3' }}</p>
+<p>JSON pipe: {{ person | json }} </p>
+
+<p>KeyValue Pipe</p>
+<p *ngFor="let item of person | keyvalue: keepSamePropOrder">
+  {{item.key}} : {{item.value}}
+</p>
+
+
+<!--Using a custom pipe with multiple parameters-->
+<p>{{ 'Foobar' | orderTransformation: ['Snacks','Drinks'] : ['#edd01'] }}</p>
+
