@@ -9,7 +9,16 @@
   {{item.key}} : {{item.value}}
 </p>
 
+<input type="text" >
+<button (click)="addOrder()">Add order</button>
 
 <!--Using a custom pipe with multiple parameters-->
-<p>{{ 'Foobar' | orderTransformation: ['Snacks','Drinks'] : ['#edd01'] }}</p>
+<p>{{ 'Foobar' | orderTransformation: orders : invoices }}</p>
+<!--<p>{{ getOrderInvoice('Foobar') }}</p>-->
 
+@if (person.details.yearsOfExperience; as experience) {
+  <p>Using new control flow's reference {{ experience }}</p>
+  @if (experience === 5) {
+    True
+  }
+}

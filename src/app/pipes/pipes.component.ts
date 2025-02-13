@@ -21,5 +21,18 @@ export class PipesComponent {
     }
   };
 
+  orders = [{id: 1, name: 'Snacks'}, { id: 2, name: 'Drinks'}];
+  invoices = ['#ord01'];
+
+  addOrder() {
+   this.orders.push({id: Math.random(), name: `Item${Math.random()}`}); // Mutating the array dont update the view as the pipe was pure
+    // this.orders = [{id: 1, name: 'Snacks_Replace'}, { id: 2, name: 'Drinks_Replace'}]; // Replacing the array update's the view if the pipe was impure
+  }
+
+  getOrderInvoice(customer: string) {
+    console.log('getOrderInvoice() triggered!');
+    return `${customer} ordered ${this.orders[0]?.name}, invoice ${this.invoices[0]} sent.`;
+  }
+
   keepSamePropOrder() { return 0; } // For this, angular keyvalue pipe will keep the same order in object property
 }
