@@ -1,9 +1,19 @@
-<p>Content Projections in Action!</p>
+<h4>Content Projections in Action!</h4>
 <!-- Using the component -->
 <custom-card>
-
+<!--ng-content is insprired by native slot element-->
 <!--  Need to add CUSTOM_ELEMENTS_SCHEMA for using multiple placeholders-->
   <card-title><p>Card Title</p></card-title>
 <!--  <card-body><p>This is a card body</p></card-body>-->
   <p>This is a card contents</p>
 </custom-card>
+
+
+<h3>Templates Fragments</h3>
+<p>This is a normal element</p>
+<ng-template #myFragment>
+  <p>This is a template fragment rendered by NgTemplateOutlet</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="myFragment"></ng-container>
+
