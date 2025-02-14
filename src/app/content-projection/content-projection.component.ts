@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {PipesComponent} from "../pipes/pipes.component";
 
 @Component({
   selector: 'app-content-projection',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './content-projection.component.css'
 })
 export class ContentProjectionComponent {
-
+  protected readonly PipesComponent = PipesComponent;
+  user = {
+    id: 1,
+    name: 'Sanjid',
+  }
 }

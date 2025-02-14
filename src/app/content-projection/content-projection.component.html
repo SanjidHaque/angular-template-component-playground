@@ -18,3 +18,17 @@
 
 
 
+<h3>Ng Containers</h3>
+<section>
+  <ng-container>
+    <h3>User bio</h3>
+    <p>Here's some info about the user</p>
+  </ng-container>
+</section>
+
+<!--Can render components dynamically with ngComponentOutlet-->
+<!--<ng-container [ngComponentOutlet]="PipesComponent" ></ng-container>-->
+
+<h3>Local template variables</h3>
+@let userName = user.name ?? 'Fallback userName';
+<p>Username from local template variable {{ userName }}</p>
