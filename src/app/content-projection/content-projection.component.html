@@ -8,12 +8,13 @@
   <p>This is a card contents</p>
 </custom-card>
 
-
 <h3>Templates Fragments</h3>
 <p>This is a normal element</p>
-<ng-template #myFragment>
-  <p>This is a template fragment rendered by NgTemplateOutlet</p>
+<ng-template #myFragment let-fragmentId="fragmentId">
+  <p>This is a template fragment rendered by NgTemplateOutlet, id: {{ fragmentId }}</p>
 </ng-template>
 
-<ng-container *ngTemplateOutlet="myFragment"></ng-container>
+<ng-container  [ngTemplateOutlet]="myFragment" [ngTemplateOutletContext]="{fragmentId: '#fragment001'}" ></ng-container>
+
+
 
