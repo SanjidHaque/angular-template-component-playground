@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './pipes.component.css'
 })
 export class PipesComponent {
+  text = '';
   amount = 123.1493;
   company = 'acme corporation';
   purchasedOn = '2024-07-08';

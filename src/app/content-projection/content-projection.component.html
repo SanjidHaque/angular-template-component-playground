@@ -1,10 +1,11 @@
 <h4>Content Projections in Action!</h4>
 <!-- Using the component -->
 <custom-card>
-<!--ng-content is insprired by native slot element-->
+<!--ng-content is inspired by native slot element-->
 <!--  Need to add CUSTOM_ELEMENTS_SCHEMA for using multiple placeholders-->
   <card-title><p>Card Title</p></card-title>
 <!--  <card-body><p>This is a card body</p></card-body>-->
+<!--  <p card-body>Another way of projecting selected ng-content</p>-->
   <p>This is a card contents</p>
 </custom-card>
 
@@ -29,6 +30,11 @@
 <!--Can render components dynamically with ngComponentOutlet-->
 <!--<ng-container [ngComponentOutlet]="PipesComponent" ></ng-container>-->
 
-<h3>Local template variables</h3>
-@let userName = user.name ?? 'Fallback userName';
-<p>Username from local template variable {{ userName }}</p>
+<app-pipes *ngIf="shouldShow"></app-pipes>
+
+<!--<h3>Local template variables</h3>-->
+<!--@let userName = user.name;-->
+<!--<p>Username from local template variable {{ userName }}</p>-->
+
+
+<input type="text" value="My value" #inputBox>
