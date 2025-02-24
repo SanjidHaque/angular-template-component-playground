@@ -4,8 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-pipes',
   standalone: false,
   templateUrl: './pipes.component.html',
-  styleUrl: './pipes.component.css'
+  styleUrl: './pipes.component.css',
+  host: {
+
+  }
 })
+
 export class PipesComponent {
   text = '';
   amount = 123.1493;
@@ -33,6 +37,10 @@ export class PipesComponent {
   getOrderInvoice(customer: string) {
     console.log('getOrderInvoice() triggered!');
     return `${customer} ordered ${this.orders[0]?.name}, invoice ${this.invoices[0]} sent.`;
+  }
+
+  updateValue(event: KeyboardEvent) {
+
   }
 
   keepSamePropOrder() { return 0; } // For this, angular keyvalue pipe will keep the same order in object property

@@ -7,6 +7,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { OrderTransformationPipe } from './custom-transformation.pipe';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { CustomCardComponent } from './content-projection/custom-card/custom-card.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CustomCardComponent } from './content-projection/custom-card/custom-car
     PipesComponent,
     OrderTransformationPipe,
     ContentProjectionComponent,
-    CustomCardComponent
+    CustomCardComponent,
+    LifecycleHooksComponent
   ],
   imports: [
     BrowserModule,
