@@ -8,6 +8,9 @@ import { OrderTransformationPipe } from './custom-transformation.pipe';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { CustomCardComponent } from './content-projection/custom-card/custom-card.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { ChildOneComponent } from './change-detection/child-one.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
     OrderTransformationPipe,
     ContentProjectionComponent,
     CustomCardComponent,
-    LifecycleHooksComponent
+    LifecycleHooksComponent,
+    ChangeDetectionComponent,
+    ChildOneComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
