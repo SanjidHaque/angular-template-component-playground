@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: false,
   pure: true
 })
+
 export class OrderTransformationPipe implements PipeTransform {
   transform(customer: string, orders: any[], invoices: string[]): unknown {
     console.log('orderTransformationPipe() triggered!');

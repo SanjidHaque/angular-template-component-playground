@@ -7,6 +7,6 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
     standalone: false,
     changeDetection: ChangeDetectionStrategy.Default
 })
-export class AppComponent {
 
+export class AppComponent {
 }

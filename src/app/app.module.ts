@@ -11,6 +11,7 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 import { ChildOneComponent } from './change-detection/child-one.component';
 import {FormsModule} from "@angular/forms";
+import {CssNestingComponent} from "./css-nesting/css-nesting.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FormsModule} from "@angular/forms";
     CustomCardComponent,
     LifecycleHooksComponent,
     ChangeDetectionComponent,
-    ChildOneComponent
+    ChildOneComponent,
+    CssNestingComponent
   ],
   imports: [
     BrowserModule,
